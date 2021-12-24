@@ -1,0 +1,118 @@
+<style>
+h1 {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+.showButton {
+    padding: 5px;
+    margin: 5px;
+}
+.targetDiv {
+    display: none;
+}
+</style>
+
+<script>
+<h1>Example of nested divs toggle</h1>
+$(function() {
+  $('.showButton').click(function() {
+    $('.targetDiv').hide();
+    //show appropriate divs based on selection
+    switch ($(this).attr('target')) {
+       case '3':
+        $('#div1').show();
+        break;
+      case '4':
+        $('#div1').show();
+        break;
+      case '5':
+        $('#div2').show();
+        break;
+      case '6':
+        $('#div2').show();
+        break
+      case '7':
+        $('#div2').show();
+        break;
+      case '8':
+        $('#div2').show();
+        break;
+      case '9':
+        $('#div2').show();
+        break;
+        case '10':
+        $('#div2').show();
+        break;
+        case '11':
+        $('#div2').show();
+        $('#div5').show();
+        break;
+      case '12':
+        $('#div2').show();
+        $('#div6').show();
+        break;
+      case '13':
+        $('#div2').show();
+        $('#div9').show();
+        break;
+      case '14':
+        $('#div2').show();
+        $('#div10').show();
+        break;
+      case '15':
+        $('#div2').show();
+        $('#div5').show();
+        $('#div11').show();
+        break;
+      case '16':
+        $('#div2').show();
+        $('#div5').show();
+        $('#div11').show();
+        break;
+    }
+    $('#div' + $(this).attr('target')).show('slide');
+  });
+});
+</script>
+
+<div class="buttons">
+    <button class="showButton" target="1">general hints</button>
+    <button class="showButton" target="2">specific hints</button>
+</div>
+<div id="div1" class="targetDiv">Content of div 1.<br>
+    <button class="showButton" target="3">hint 1</button>
+    <button class="showButton" target="4">hint 2</button>
+    <div id="div3" class="targetDiv">maze hint.</div>
+    <div id="div4" class="targetDiv">latin hint</div>
+</div>
+<div id="div2" class="targetDiv">Content of div 2.<br>
+    <button class="showButton" target="5">hint 1,2</button>
+    <button class="showButton" target="6">hint 3</button>
+    <button class="showButton" target="7">hint 4</button>
+    <button class="showButton" target="8">hint 5</button>
+    <button class="showButton" target="9">hint 6</button>
+    <button class="showButton" target="10">hint 7</button>
+    <div id="div7" class="targetDiv">hint4</div>
+    <div id="div8" class="targetDiv">hint 5</div>  
+</div>
+<div id="div5" class="targetDiv">Content of div 5.<br>
+    <button class="showButton" target="11">I'm still stuck</button>
+</div>
+<div id="div6" class="targetDiv">Content of div 6.<br>
+    <button class="showButton" target="12">I'm still stuck</button>
+    <div id="div12" class="targetDiv">still stuck 12 </div>
+</div>
+<div id="div9" class="targetDiv">Content of div 9.<br>
+    <button class="showButton" target="13">I'm still stuck</button>
+    <div id="div13" class="targetDiv">still stuck 13 </div>
+</div>
+<div id="div10" class="targetDiv">Content of div 10.<br>
+    <button class="showButton" target="14">I'm still stuck</button>
+    <div id="div14" class="targetDiv">still stuck 14 </div>
+</div>
+<div id="div11" class="targetDiv">Content of div 11.<br>
+    <button class="showButton" target="15">I'm still stuck</button>
+    <button class="showButton" target="16">I'm still stuck</button>
+    <div id="div15" class="targetDiv">still stuck 15 </div>
+    <div id="div16" class="targetDiv">still stuck 16 </div>
+</div>
